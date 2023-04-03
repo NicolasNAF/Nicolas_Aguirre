@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolas Aguirre</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700;900&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="nav">
+      <p class="logo">N.A</p>
+
+      <ul class="navbar">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Sobre mi</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Asesorias</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contacto</a>
+        </li>
+      </ul>
+
+      <span class="material-icons navIcon"> menu </span>
+    </nav>
+
+    <main>
+      <!-- HOME -->
+      <section class="container">
+        <form action="POST" class="form">
+          <div class="form__label_column">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="nombre" required />
+          </div>
+          <div class="form__label_column">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email" required />
+          </div>
+          <div class="form__label_column">
+            <p>Sexo</p>
+            <div class="label_row">
+              <input type="radio" id="masculino" name="sexo" value="Masculino" required />
+              <label for="masculino">Masculino</label>
+            </div>
+            <div class="label_row">
+              <input type="radio" id="femenino" name="sexo" value="Femenino" required />
+              <label for="femenino">Femenino</label>
+            </div>
+          </div>
+          <div class="form__label_column">
+            <label for="pais">Pais</label>
+            <input type="text" id="pais" name="pais" required />
+          </div>
+          <div class="label_row">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" required />
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" name="altura" required />
+            <label for="peso">Peso</label>
+            <input type="text" id="peso" name="peso" required />
+          </div>
+          <div class="form__label_column">
+            <p>Objetivo</p>
+            <div class="form__label_row">
+              <input
+                type="radio"
+                id="ganarMasa"
+                name="objetivo"
+                value="Ganar masa muscular"
+                required
+              />
+              <label for="ganarMasa">Ganar masa muscular</label>
+            </div>
+            <div class="form__label_row">
+              <input type="radio" id="perderGrasa" name="objetivo" value="Perder grasa" required />
+              <label for="perderGrasa">Perder grasa</label>
+            </div>
+            <div class="form__label_row">
+              <input
+                type="radio"
+                id="recomposicion"
+                name="objetivo"
+                value="Recomposicion corporal"
+                required
+              />
+              <label for="recomposicion">Recomposicion corporal</label>
+            </div>
+            <div class="form__label_row">
+              <input
+                type="radio"
+                id="salud"
+                name="objetivo"
+                value="Solo salud y entrenamiento"
+                required
+              />
+              <label for="salud">Solo salud y entrenamiento</label>
+            </div>
+          </div>
+          <div class="form__label_column">
+            <p>Interesado en el plan</p>
+            <div class="form__label_row">
+              <input type="radio" id="mensual" name="plan" value="Plan mensual" required />
+              <label for="mensual">Plan mensual</label>
+            </div>
+            <div class="form__label_row">
+              <input type="radio" id="trimestral" name="plan" value="Plan trimestral" required />
+              <label for="trimestral">Plan trimestral</label>
+            </div>
+            <div class="form__label_row">
+              <input type="radio" id="semestral" name="plan" value="Plan semestral" required />
+              <label for="semestral">Plan semestral</label>
+            </div>
+          </div>
+          <div class="form__label_column">
+            <p>Metodo de pago</p>
+            <div class="form__label_row">
+              <input type="radio" id="mercadopago" name="metodo" value="Mercado Pago" required />
+              <label for="mercadopago">Mercado Pago</label>
+            </div>
+            <div class="form__label_row">
+              <input type="radio" id="paypal" name="metodo" value="Paypal" required />
+              <label for="paypal">Paypal</label>
+            </div>
+          </div>
+          <button type="submit">Enviar por WhatsApp</button>
+        </form>
+      </section>
+      <!-- FOOTER/CONTACTO -->
+      <footer class="container footer" id="contacto">
+        <h2 class="section__title">Contacto</h2>
+        <div class="social__media">
+          <img class="social__media__logo" src="./assets/instagram.png" alt="instagram icon" />
+          <img class="social__media__logo" src="./assets/tiktok.png" alt="tiktok icon" />
+        </div>
+        <p>
+          Copyright <span class="year"></span> © Nicolas Aguirre | Desarrollado por Lautaro
+          Espinillo.
+        </p>
+      </footer>
+    </main>
+    <script src="src/app.js"></script>
+  </body>
+</html>
