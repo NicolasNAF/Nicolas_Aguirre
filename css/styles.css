@@ -42,6 +42,62 @@ a {
   text-decoration: none;
 }
 
+/* ==== LOGO ==== */
+
+/* .nav .logo {
+  font-family: "Secular One", sans-serif;
+  font-size: 1.5rem;
+} */
+
+.wrapper {
+  font-size: 1.6rem;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* mix-blend-mode: screen; */
+  cursor: pointer;
+}
+
+.wrapper a {
+  font-family: Impact, "Anton", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: block;
+  position: absolute;
+  color: var(--white);
+  letter-spacing: -0.005em;
+}
+
+.wrapper a:hover {
+  color: var(--yellow);
+}
+
+.wrapper a::before,
+.wrapper a::after {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  padding: 0 0.1em;
+  z-index: 1;
+}
+
+.wrapper a::before {
+  position: absolute;
+  -webkit-text-stroke: 0.1em black;
+  z-index: 0;
+}
+
+.wrapper a:first-child {
+  transform: translate(-0.255em, -0.25em);
+  /* color: var(--yellow); */
+}
+
+.wrapper a:last-child {
+  /* color: var(--pink); */
+  transform: translate(0.255em, 0.25em);
+}
+
 /* ==== NAVBAR ==== */
 
 .nav {
@@ -56,11 +112,6 @@ a {
   border-bottom: 2px solid var(--yellow);
   transition: all 0.2s;
   z-index: 1;
-}
-
-.nav .logo {
-  font-family: "Secular One", sans-serif;
-  font-size: 1.5rem;
 }
 
 .nav .navIcon {
@@ -110,6 +161,12 @@ main {
 
 .text-yellow {
   color: var(--yellow);
+  font-weight: 600;
+}
+
+.text-pink {
+  color: var(--pink);
+  font-weight: 600;
 }
 
 .section__title {
@@ -372,6 +429,7 @@ main {
 }
 #pasos .card {
   height: 250px;
+  min-height: fit-content;
   justify-content: start;
   border: 2px solid var(--pink);
   background-color: var(--pink);
@@ -522,24 +580,40 @@ main {
   background-color: var(--white);
   margin: 15% auto; /* Centrado vertical y horizontalmente */
   color: var(--black);
-  padding: 2rem;
+  padding: 0.5rem 1rem 1rem 1rem;
   border-radius: 0.5rem;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content .wrapper {
+  justify-content: left;
+}
+
+.modal-content .wrapper a {
+  color: var(--yellow);
+  cursor: default;
 }
 
 /* Estilos para el botón "cerrar" */
 .close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   color: #000;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #750d0d;
   text-decoration: none;
   cursor: pointer;
 }
@@ -615,7 +689,7 @@ main {
   }
   /* PASOS */
   #pasos .card {
-    height: 250px;
+    height: auto;
   }
 
   #pasos .material-icons {
@@ -698,10 +772,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  #pasos .card {
-    height: 170px;
-  }
-
   #pasos .material-icons {
     font-size: 1.5rem;
   }
@@ -725,11 +795,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  /* PASOS */
-  #pasos .card {
-    height: 170px;
-  }
-
   #pasos .material-icons {
     font-size: 1rem;
   }
@@ -739,6 +804,31 @@ main {
   }
   .gallery {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    width: 90vw;
+    padding: 0.5rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .container h1 {
+    font-size: 1.4rem;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .container .btn_home {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    width: 100%;
   }
 }
 
