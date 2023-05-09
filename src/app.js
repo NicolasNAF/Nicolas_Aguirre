@@ -5,6 +5,30 @@ const navbar = document.querySelector(".navbar")
 const navLinks = document.querySelectorAll(".nav-link")
 const media = window.matchMedia("(max-width: 768px)")
 
+const $precio_mensual_1 = document.querySelector("#precio_mensual_1")
+const $precio_mensual_2 = document.querySelector("#precio_mensual_2")
+const $precio_mensual_3 = document.querySelector("#precio_mensual_3")
+const $precio_trimestral_1 = document.querySelector("#precio_trimestral_1")
+const $precio_trimestral_2 = document.querySelector("#precio_trimestral_2")
+const $precio_trimestral_3 = document.querySelector("#precio_trimestral_3")
+
+// API
+let prices = fetch("https://sheetdb.io/api/v1/jlbgbujbxmu56")
+  .then((response) => response.json())
+  .then((data) => cargarPrecios(data))
+
+function cargarPrecios(data) {
+  // Precios mensuales
+  $precio_mensual_1.textContent = data[0].PRECIO_MENSUAL
+  $precio_mensual_2.textContent = data[1].PRECIO_MENSUAL
+  $precio_mensual_3.textContent = data[2].PRECIO_MENSUAL
+
+  // Precios trimestrales
+  $precio_trimestral_1.textContent = data[0].PRECIO_TRIMESTRAL
+  $precio_trimestral_2.textContent = data[1].PRECIO_TRIMESTRAL
+  $precio_trimestral_3.textContent = data[2].PRECIO_TRIMESTRAL
+}
+
 // SCROLL
 
 window.onscroll = () => scrollFunction()
@@ -82,13 +106,6 @@ $btn_world.addEventListener("click", () => {
     showPrice("world")
   }
 })
-
-const $precio_mensual_1 = document.querySelector("#precio_mensual_1")
-const $precio_mensual_2 = document.querySelector("#precio_mensual_2")
-const $precio_mensual_3 = document.querySelector("#precio_mensual_3")
-const $precio_trimestral_1 = document.querySelector("#precio_trimestral_1")
-const $precio_trimestral_2 = document.querySelector("#precio_trimestral_2")
-const $precio_trimestral_3 = document.querySelector("#precio_trimestral_3")
 
 function showPrice(str) {
   if (str === "arg") {
