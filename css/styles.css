@@ -329,13 +329,14 @@ main {
 
 .card__container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .card {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
@@ -354,8 +355,9 @@ main {
 .card__value {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1rem;
   background-color: var(--black_purple);
   padding: 1rem;
@@ -702,6 +704,12 @@ main {
   }
 
   #pasos .card__value .card__info {
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card__container {
+    grid-template-columns: 1fr;
   }
 }
 

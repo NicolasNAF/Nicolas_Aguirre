@@ -21,12 +21,10 @@ function cargarPrecios(data) {
   // Precios mensuales
   $precio_mensual_1.textContent = data[0].PRECIO_MENSUAL
   $precio_mensual_2.textContent = data[1].PRECIO_MENSUAL
-  $precio_mensual_3.textContent = data[2].PRECIO_MENSUAL
 
   // Precios trimestrales
   $precio_trimestral_1.textContent = data[0].PRECIO_TRIMESTRAL
   $precio_trimestral_2.textContent = data[1].PRECIO_TRIMESTRAL
-  $precio_trimestral_3.textContent = data[2].PRECIO_TRIMESTRAL
 }
 
 // SCROLL
