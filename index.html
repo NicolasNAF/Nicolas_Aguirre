@@ -80,7 +80,7 @@
             <span class="text-yellow">100%.</span>
           </p>
           <p>
-            Soy de Buenos Aires Argentina, tengo 24 años y estudio la
+            Soy de Buenos Aires Argentina, tengo <span class="edad"></span> años y estudio la
             <span class="text-yellow"
               >Licenciatura en Nutrición en la Universidad de La Plata.</span
             >
@@ -134,6 +134,10 @@
             <li>
               <span class="material-icons">check</span>
               Certificación PUESTA A PUNTO para culturismo (Mariano Segovia)
+            </li>
+            <li>
+              <span class="material-icons">check</span>
+              Preparador avanzado en classic physique y mens physique” (Mariano Segovia)
             </li>
           </ul>
         </div>
@@ -227,9 +231,9 @@
             <span>Soy de argentina</span>
             <img class="flag_icon" src="./assets/argentina.svg" alt="" />
           </button>
-          <button class="btn_select__country btn_home" id="world" disabled>
+          <button class="btn_select__country btn_home" id="world">
             <img class="flag_icon" src="./assets/earth.svg" alt="" />
-            <span>Soy de otro pais <small>(Proximamente)</small></span>
+            <span>Soy de otro pais <small>(USD)</small></span>
             <img class="flag_icon" src="./assets/earth.svg" alt="" />
           </button>
         </div>
@@ -288,14 +292,81 @@
                 id="precio_mensual_2"
                 data-target="modal"
               >
-                $10.000 MENSUAL (LLEVATE UN PLAN + OTRO CON UN 50% DE DESCUENTO)
+                $10.000 MENSUAL
               </button>
               <button
                 class="precio btn_home btn_open_modal"
                 id="precio_trimestral_2"
                 data-target="modal"
               >
-                $28.000 TRIMESTRAL (AHORA CON PROMO 2X1)
+                $28.000 TRIMESTRAL
+              </button>
+            </div>
+            <footer class="card__footer"></footer>
+          </div>
+          <div class="card full-width">
+            <h4 class="card__title">PLAN VIP 1 A 1</h4>
+            <div class="card__value">
+              <h2 class="card__info">¿Estás cansado/a de no tener resultados?</h2>
+              <h3 class="card__info">Te cuento porque este plan es para vos.</h3>
+              <p class="card__info">
+                El plan 1 a 1 fue creado con la idea de que las personas que accedan se comprometan
+                al 100% para conseguir el objetivo propuesto.
+              </p>
+              <p class="card__info">
+                Es un plan en donde vas a tener un seguimiento constante, con todas las herramientas
+                necesarias para que logres tu mejor versión.
+              </p>
+              <p class="card__info">
+                Si realmente queres un cambio y decidiste cambiar definitivamente y estás
+                preparado/a para comprometerte y darlo todo para conseguir tu objetivo. Este es tu
+                plan
+              </p>
+              <h2 class="card__info">
+                CUPOS DISPONIBLES : <span class="text-yellow" id="cupos_plan_vip">3</span>...
+              </h2>
+              <h3 class="card__info">Deja de perder el tiempo y comenza ya tu mejor versión</h3>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>PLAN DE NUTRICIÓN Y ENTRENAMIENTO 100%
+                PERSONALIZADO
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>LINKS A LOS VIDEOS DE CADA UNOS DE LOS
+                EJERCICIOS
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>MODIFICACIONES DEL PLAN CADA 4 SEMANAS
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CHEQUEOS FÍSICOS Y PESO CADA SEMANA VÍA
+                WHATSAPP
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CONTACTO Y RESOLUCIÓN DE DUDAS VIA
+                WHATSAPP
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>ATENCIÓN AL CLIENTE AL 100%
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>VIDEOLLAMADA 1 VEZ A LA SEMANA
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>RESULTADOS 100% GARANTIZADOS
+              </p>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_mensual_vip"
+                data-target="modal"
+              >
+                $15.000 MENSUAL
+              </button>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_trimestral_vip"
+                data-target="modal"
+              >
+                $42.000 TRIMESTRAL
               </button>
             </div>
             <footer class="card__footer"></footer>

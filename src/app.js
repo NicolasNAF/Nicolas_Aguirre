@@ -7,24 +7,46 @@ const media = window.matchMedia("(max-width: 768px)")
 
 const $precio_mensual_1 = document.querySelector("#precio_mensual_1")
 const $precio_mensual_2 = document.querySelector("#precio_mensual_2")
-const $precio_mensual_3 = document.querySelector("#precio_mensual_3")
+const $precio_mensual_vip = document.querySelector("#precio_mensual_vip")
 const $precio_trimestral_1 = document.querySelector("#precio_trimestral_1")
 const $precio_trimestral_2 = document.querySelector("#precio_trimestral_2")
-const $precio_trimestral_3 = document.querySelector("#precio_trimestral_3")
+const $precio_trimestral_vip = document.querySelector("#precio_trimestral_vip")
+const $cupos_plan_vip = document.querySelector("#cupos_plan_vip")
 
+const $edad = document.querySelector(".edad")
 // API
 let prices = fetch("https://sheetdb.io/api/v1/jlbgbujbxmu56")
   .then((response) => response.json())
-  .then((data) => cargarPrecios(data))
+  .then((data) => cargarPrecios(data, "arg"))
 
-function cargarPrecios(data) {
-  // Precios mensuales
-  $precio_mensual_1.textContent = data[0].PRECIO_MENSUAL
-  $precio_mensual_2.textContent = data[1].PRECIO_MENSUAL
+function cargarPrecios(data, country) {
+  if (country === "arg") {
+    // Precios mensuales
+    $precio_mensual_1.textContent = data[0].PRECIO_MENSUAL
+    $precio_mensual_2.textContent = data[1].PRECIO_MENSUAL
+    $precio_mensual_vip.textContent = data[2].PRECIO_MENSUAL
 
-  // Precios trimestrales
-  $precio_trimestral_1.textContent = data[0].PRECIO_TRIMESTRAL
-  $precio_trimestral_2.textContent = data[1].PRECIO_TRIMESTRAL
+    // Precios trimestrales
+    $precio_trimestral_1.textContent = data[0].PRECIO_TRIMESTRAL
+    $precio_trimestral_2.textContent = data[1].PRECIO_TRIMESTRAL
+    $precio_trimestral_vip.textContent = data[2].PRECIO_TRIMESTRAL
+
+    // Cupos
+    $cupos_plan_vip.textContent = data[2].CUPOS
+  } else {
+    // Precios mensuales
+    $precio_mensual_1.textContent = data[0].PRECIO_MENSUAL_USD
+    $precio_mensual_2.textContent = data[1].PRECIO_MENSUAL_USD
+    $precio_mensual_vip.textContent = data[2].PRECIO_MENSUAL_USD
+
+    // Precios trimestrales
+    $precio_trimestral_1.textContent = data[0].PRECIO_TRIMESTRAL_USD
+    $precio_trimestral_2.textContent = data[1].PRECIO_TRIMESTRAL_USD
+    $precio_trimestral_vip.textContent = data[2].PRECIO_TRIMESTRAL_USD
+
+    // Cupos
+    $cupos_plan_vip.textContent = data[2].CUPOS
+  }
 }
 
 // SCROLL
@@ -108,20 +130,14 @@ $btn_world.addEventListener("click", () => {
 function showPrice(str) {
   if (str === "arg") {
     // Cambio texto
-    $precio_mensual_1.textContent = "$3800 Mensual"
-    $precio_mensual_2.textContent = "$4500 Mensual"
-    $precio_mensual_3.textContent = "$6000 Mensual"
-    $precio_trimestral_1.textContent = "$10000 Trimestral"
-    $precio_trimestral_2.textContent = "$12000 Trimestral"
-    $precio_trimestral_3.textContent = "$17000 Trimestral"
+    let prices = fetch("https://sheetdb.io/api/v1/jlbgbujbxmu56")
+      .then((response) => response.json())
+      .then((data) => cargarPrecios(data, "arg"))
   } else {
     // Cambio texto
-    $precio_mensual_1.textContent = "$10 Mensual"
-    $precio_mensual_2.textContent = "$15 Mensual"
-    $precio_mensual_3.textContent = "$20 Mensual"
-    $precio_trimestral_1.textContent = "$25 Trimestral"
-    $precio_trimestral_2.textContent = "$40 Trimestral"
-    $precio_trimestral_3.textContent = "$50 Trimestral"
+    let prices = fetch("https://sheetdb.io/api/v1/jlbgbujbxmu56")
+      .then((response) => response.json())
+      .then((data) => cargarPrecios(data, "world"))
   }
 }
 
@@ -157,3 +173,22 @@ modal.addEventListener("mousedown", (e) => {
     closeModal()
   }
 })
+
+// CALCULAR EDAD
+function calcularEdad(fechaNacimiento) {
+  // Convierte la cadena de fecha de nacimiento en un objeto de fecha
+  const fechaNac = new Date(fechaNacimiento)
+  // Obtiene la fecha actual
+  const fechaActual = new Date()
+  // Calcula la diferencia en milisegundos entre la fecha actual y la de nacimiento
+  const diferencia = fechaActual - fechaNac
+  // Convierte la diferencia de milisegundos a años
+  const edad = Math.floor(diferencia / (1000 * 60 * 60 * 24 * 365.25))
+  return edad
+}
+
+// Ejemplo de uso
+const fechaNacimiento = "1998-08-10" // Debes proporcionar la fecha en formato YYYY-MM-DD
+const edadCalculada = calcularEdad(fechaNacimiento)
+
+$edad.textContent = edadCalculada

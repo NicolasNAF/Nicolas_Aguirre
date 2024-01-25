@@ -346,6 +346,13 @@ main {
   text-align: center;
 }
 
+.card.full-width {
+  grid-column: 1 / span 2;
+}
+
+#cupos_plan_vip {
+}
+
 .card__title {
   font-size: 1.5rem;
   padding: 0.5rem;
