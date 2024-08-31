@@ -384,6 +384,10 @@ main {
   gap: 0.5rem;
 }
 
+.card__value .card__description {
+  text-align: left;
+}
+
 #asesorias .card__value .material-icons {
   font-size: 0.2;
   color: rgb(133, 209, 103);
