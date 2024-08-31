@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolas Aguirre - Calculadoras</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700;900&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrapper">
+        <a href="#" data-text="N"></a>
+        <a href="#" data-text="A"></a>
+      </div>
+
+      <ul class="navbar">
+        <li class="nav-item">
+          <a href="/#" class="nav-link">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/#sobre-mi" class="nav-link">Sobre mi</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/#asesorias" class="nav-link">Asesorias</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/calculadoras.html" class="nav-link">Calculadoras</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/#contacto" class="nav-link">Contacto</a>
+        </li>
+      </ul>
+
+      <span class="material-icons navIcon"> menu </span>
+    </nav>
+
+    <main>
+      <!-- VIDEO -->
+      <section class="container" id="video">
+        <h2 class="section__title">
+          Calculadoras <span class="text-yellow">automatizadas</span> para pérdida de grasa y
+          ganancia muscular
+        </h2>
+        <h2 class="section__subtitle">
+          Optimiza tu camino hacia el <span class="text-yellow">éxito</span> en menos
+          <span class="text-yellow">tiempo</span>
+        </h2>
+        <div class="videowrapper">
+          <iframe
+            src="https://www.youtube.com/embed/SRvFIjbehsE?si=g8FGa3lXcNRtF84j"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- CALCULADORAS -->
+      <section class="container" id="calculadoras">
+        <h2 class="section__title">Calculadoras</h2>
+        <div class="select__country">
+          <button class="btn_select__country btn_home active" id="argentina">
+            <img class="flag_icon" src="./assets/argentina.svg" alt="" />
+            <span>Soy de argentina</span>
+            <img class="flag_icon" src="./assets/argentina.svg" alt="" />
+          </button>
+          <button class="btn_select__country btn_home" id="world">
+            <img class="flag_icon" src="./assets/earth.svg" alt="" />
+            <span>Soy de otro pais <small>(USD)</small></span>
+            <img class="flag_icon" src="./assets/earth.svg" alt="" />
+          </button>
+        </div>
+        <div class="card__container">
+          <div class="card">
+            <h4 class="card__title">CALCULADORA VOLUMEN</h4>
+            <img src="./assets/VOLUMEN.png" alt="" class="calculator-img" />
+            <div class="card__value">
+              <p class="card__info">
+                <span class="material-icons">done_all</span>PLAN DE NUTRICIÓN Y ENTRENAMIENTO
+                PERSONALIZADO
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>MODIFICACIONES DEL PLAN CADA 4 SEMANAS
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CONTACTO Y RESOLUCIÓN DE DUDAS VIA
+                WHATSAPP
+              </p>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_calc_volumen"
+                data-target="modal"
+              >
+                $8.000 MENSUAL
+              </button>
+            </div>
+            <footer class="card__footer"></footer>
+          </div>
+          <div class="card">
+            <h4 class="card__title">CALCULADORA DEFINICION</h4>
+            <img src="./assets/DEFINICION.png" alt="" class="calculator-img" />
+            <div class="card__value">
+              <p class="card__info">
+                <span class="material-icons">done_all</span>PLAN DE NUTRICIÓN Y ENTRENAMIENTO
+                PERSONALIZADO
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>MODIFICACIONES DEL PLAN CADA 4 SEMANAS
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CHEQUEOS FÍSICOS Y PESO CADA 15 DIAS VIA
+                WHATSAPP
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CONTACTO Y RESOLUCIÓN DE DUDAS VIA
+                WHATSAPP
+              </p>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_calc_definicion"
+                data-target="modal"
+              >
+                $...
+              </button>
+            </div>
+            <footer class="card__footer"></footer>
+          </div>
+          <div class="card">
+            <h4 class="card__title">CALCULADORA VOLUMEN + DEFINICION</h4>
+            <img src="./assets/AMBOS.png" alt="" class="calculator-img" />
+            <div class="card__value">
+              <p class="card__info">
+                <span class="material-icons">done_all</span>PLAN DE NUTRICIÓN Y ENTRENAMIENTO
+                PERSONALIZADO
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>MODIFICACIONES DEL PLAN CADA 4 SEMANAS
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CHEQUEOS FÍSICOS Y PESO CADA 15 DIAS VIA
+                WHATSAPP
+              </p>
+              <p class="card__info">
+                <span class="material-icons">done_all</span>CONTACTO Y RESOLUCIÓN DE DUDAS VIA
+                WHATSAPP
+              </p>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_calc_ambas"
+                data-target="modal"
+              >
+                $...
+              </button>
+            </div>
+            <footer class="card__footer"></footer>
+          </div>
+        </div>
+        <a
+          href="https://api.whatsapp.com/send?phone=+5491144088053&text=HOLA%20BUEN%20DIA"
+          class="btn_home btn_wsp"
+          target="_blank"
+        >
+          <img class="wsp_icon" src="./assets/wsp.png" alt="whatsapp icon" />
+          <span>WHATSAPP</span>
+          <img class="wsp_icon" src="./assets/wsp.png" alt="whatsapp icon" />
+        </a>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="wrapper">
+                <a data-text="N"></a>
+                <a data-text="A"></a>
+              </div>
+              <span class="material-icons close"> cancel </span>
+            </div>
+            <div class="modal-body">
+              <div class="mercadopago-data">
+                <h3>Mercadopago</h3>
+                <p><b>Nombres:</b> Nicolas Aguirre Dal Lago</p>
+                <p><b>CVU:</b> 0000003100073656968903</p>
+                <p><b>Alias:</b> nicolas.fitness</p>
+                <p><b>CUIT:</b> 20413995311</p>
+                <p><b>Banco:</b> Mercado Pago</p>
+                <img src="./assets/mp.png" alt="" class="mp-image" />
+              </div>
+              <div class="paypal-data">
+                <h3>Paypal</h3>
+                <p><b>Nombres:</b> Nicolas Aguirre Dal Lago</p>
+                <p><b>Banco:</b> PayPal</p>
+                <div class="payPal">
+                  <div class="responsivePayPal">
+                    <a href="https://www.paypal.com/paypalme/nikerfitness" target="_blank">
+                      <img
+                        src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
+                        alt="Check out with PayPal"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>
+              Realizada la transferencia enviar el comprobante por whatsapp:
+              <b>+54-9-1144088053</b>
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5491144088053&text=HOLA%20BUEN%20DIA"
+              class="btn_home btn_wsp"
+            >
+              <img class="wsp_icon" src="./assets/wsp.png" alt="whatsapp icon" />
+              <span>WHATSAPP</span>
+              <img class="wsp_icon" src="./assets/wsp.png" alt="whatsapp icon" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- PASOS -->
+      <section class="container" id="pasos">
+        <h2 class="section__title">Pasos a seguir para obtener tu plan</h2>
+        <div class="card__container">
+          <div class="card">
+            <h4 class="card__title">
+              1 - Elige el plan. <span class="material-icons">category</span>
+            </h4>
+            <div class="card__value">
+              <div class="card__info">
+                <p>UNA VEZ QUE ELIJAS TU PLAN, SELECCIONA SI QUERES EL PLAN MENSUAL O TRIMESTRAL</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="card__title">
+              2 - Haz la compra. <span class="material-icons">payments</span>
+            </h4>
+            <div class="card__value">
+              <p class="card__info">
+                UNA VEZ QUE HAYAS ELEGIDO EL PLAN, SOLAMENTE TENES QUE DAR CLICK EN EL BOTÓN PARA
+                QUE TE DIRIJA A REALIZAR EL PAGO
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="card__title">
+              3 - Contacto.<span class="material-icons">phone_in_talk</span>
+            </h4>
+            <div class="card__value">
+              <p class="card__info">
+                UNA VEZ REALIZADO EL PAGO, ENVIA EL COMPROBANTE DE PAGO AL WHATSAPP PARA PODER
+                MANDARTE EL FORMULARIO QUE DEBERÁS COMPLETAR Y PODER COMENZAR CON EL ARMADO DEL PLAN
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER/CONTACTO -->
+      <footer class="container footer" id="contacto">
+        <h2 class="section__title">Contacto</h2>
+        <div class="social__media">
+          <a target="_blank" href="https://www.instagram.com/nickko.ok/">
+            <img class="social__media__logo" src="./assets/instagram.svg" alt="instagram icon" />
+          </a>
+          <a target="_blank" href="https://www.tiktok.com/@nicoaguirre.fit">
+            <img class="social__media__logo" src="./assets/tiktok.svg" alt="tiktok icon" />
+          </a>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=+5491144088053&text=HOLA%20BUEN%20DIA"
+          >
+            <img class="social__media__logo" src="./assets/wsp.png" alt="tiktok icon" />
+          </a>
+        </div>
+        <p>
+          Copyright <span class="year"></span> © Nicolas Aguirre | Desarrollado por Lautaro
+          Espinillo.
+        </p>
+      </footer>
+    </main>
+    <script src="src/app.js"></script>
+    <script src="src/calculator-price.js"></script>
+  </body>
+</html>
