@@ -384,6 +384,29 @@ main {
   gap: 0.5rem;
 }
 
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-text {
+  height: 20px;
+  width: 100px;
+  display: inline-block;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
 .card__value .card__description {
   text-align: left;
 }
@@ -427,6 +450,52 @@ main {
 
 .active_cards {
   animation: animacion 1s;
+}
+/* VIDEOLLAMADA */
+
+#videollamada {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  scroll-margin-top: 5rem;
+}
+
+#videollamada .section__title {
+  grid-column-start: span 2;
+}
+
+#videollamada .videollamada_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#videollamada .videollamada_info .videollamada_subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#videollamada .material-symbols-outlined {
+  color: var(--yellow);
+}
+
+#videollamada .btn_videollamada {
+  background-color: #d7bb1b;
+  border: 2px solid var(--white);
+  box-shadow: var(--white) 4px 4px 0 0;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.videollamada_img {
+  max-width: 100%;
+  border-radius: 3rem 1rem 3rem 1rem;
+  border: 2px solid var(--white);
+  box-shadow: 5px 5px 10px 3px #00000036;
 }
 
 /* PASOS */
@@ -787,7 +856,19 @@ main {
   #pasos .card {
     height: auto;
   }
+  /* VIDEOLLAMADA */
+  #videollamada {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  #videollamada .section__title {
+    grid-column-start: auto;
+  }
+  .videollamada_img {
+    max-width: 100%;
+  }
 
+  /* PASOS */
   #pasos .material-icons {
     font-size: 1rem;
   }
@@ -861,6 +942,18 @@ main {
 
   .select__country {
     grid-template-columns: 1fr;
+  }
+
+  /* VIDEOLLAMADA */
+  #videollamada {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  #videollamada .section__title {
+    grid-column-start: auto;
+  }
+  .videollamada_img {
+    max-width: 100%;
   }
 
   /* PASOS */
