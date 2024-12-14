@@ -68,11 +68,11 @@
       </section>
       <!-- SOBRE MI -->
       <section class="container" id="sobre-mi">
-        <h2 class="section__title">Sobre mi</h2>
-        <div class="about_me_image">
+        <h2 class="section__title animate-appear">Sobre mi</h2>
+        <div class="about_me_image animate-appear">
           <img src="./assets/foto_4.jpg" alt="" class="about_me_img" />
         </div>
-        <div class="about_me_info">
+        <div class="about_me_info animate-appear">
           <p class="about_me_info_title">
             Hola mi nombre es <span class="text-yellow">Nicolas Aguirre.</span>
           </p>
@@ -97,6 +97,10 @@
             <span class="text-yellow">formaciones deportivas</span> como lo son:
           </p>
           <ul class="training_list">
+            <li>
+              <span class="material-icons">check</span>
+              DIPLOMADO EN NUTRICION DEPORTIVA DE ALTO RENDIMIENTO POR LA FISP Y LA UBA
+            </li>
             <li>
               <span class="material-icons">check</span>Planificación dietética para la Puesta a
               Punto en culturismo natural ( ECN )
@@ -151,9 +155,9 @@
       </section>
       <!-- TODO LO QUE TENES QUE SABER -->
       <section class="container" id="informacion">
-        <h2 class="section__title">Todo lo que necesitas saber de los planes</h2>
+        <h2 class="section__title animate-appear">Todo lo que necesitas saber de los planes</h2>
         <div class="card__container">
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">PLAN DE NUTRICIÓN</h4>
             <div class="card__value">
               <div class="card__info">
@@ -171,7 +175,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">PLAN DE ENTRENAMIENTO</h4>
             <div class="card__value">
               <div class="card__info">
@@ -193,7 +197,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">SEGUIMIENTO Y REVISIONES</h4>
             <div class="card__value">
               <div class="card__info">
@@ -210,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">CONTACTO Y SOPORTE</h4>
             <div class="card__value">
               <div class="card__info">
@@ -232,7 +236,7 @@
       <!-- ASESORIAS -->
       <section class="container" id="asesorias">
         <h2 class="section__title">Asesorias</h2>
-        <div class="select__country">
+        <div class="select__country animate-appear">
           <button class="btn_select__country btn_home active" id="argentina">
             <img class="flag_icon" src="./assets/argentina.svg" alt="" />
             <span>Soy de argentina</span>
@@ -245,7 +249,7 @@
           </button>
         </div>
         <div class="card__container">
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">PLAN BASICO DE NUTRICION</h4>
             <div class="card__value" id="precio_argentina">
               <p class="card__info">
@@ -269,13 +273,13 @@
                 <span class="material-icons">done_all</span>NO INCLUYE SEGUIMIENTOS NI CHEQUEOS
                 FÍSICOS
               </p>
-              <button
+              <!-- <button
                 class="precio btn_home btn_open_modal"
                 id="precio_mensual_1"
                 data-target="modal"
               >
                 <span class="skeleton skeleton-text"></span>
-              </button>
+              </button> -->
               <button
                 class="precio btn_home btn_open_modal"
                 id="precio_trimestral_1"
@@ -283,10 +287,17 @@
               >
                 <span class="skeleton skeleton-text"></span>
               </button>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_anual_1"
+                data-target="modal"
+              >
+                <span class="skeleton skeleton-text"></span>
+              </button>
             </div>
             <footer class="card__footer"></footer>
           </div>
-          <div class="card">
+          <div class="card animate-appear">
             <h4 class="card__title">PLAN BÁSICO DE ENTRENAMIENTO</h4>
             <div class="card__value">
               <p class="card__info">
@@ -310,13 +321,13 @@
                 <span class="material-icons">done_all</span>NO INCLUYE SEGUIMIENTOS NI CHEQUEOS
                 FÍSICOS
               </p>
-              <button
+              <!-- <button
                 class="precio btn_home btn_open_modal"
                 id="precio_mensual_2"
                 data-target="modal"
               >
                 <span class="skeleton skeleton-text"></span>
-              </button>
+              </button> -->
               <button
                 class="precio btn_home btn_open_modal"
                 id="precio_trimestral_2"
@@ -324,10 +335,17 @@
               >
                 <span class="skeleton skeleton-text"></span>
               </button>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_anual_2"
+                data-target="modal"
+              >
+                <span class="skeleton skeleton-text"></span>
+              </button>
             </div>
             <footer class="card__footer"></footer>
           </div>
-          <div class="card full-width">
+          <div class="card full-width animate-appear">
             <h4 class="card__title">PLAN PREMIUM DE NUTRÍCION Y ENTRENAMIENTO</h4>
             <div class="card__value">
               <p class="card__info">
@@ -360,13 +378,13 @@
                 <span class="material-icons">done_all</span>SEGUIMIENTO Y CHEQUEOS FÍSICOS CADA 15
                 DÍAS
               </p>
-              <button
+              <!-- <button
                 class="precio btn_home btn_open_modal"
                 id="precio_mensual_3"
                 data-target="modal"
               >
                 <span class="skeleton skeleton-text"></span>
-              </button>
+              </button> -->
               <button
                 class="precio btn_home btn_open_modal"
                 id="precio_trimestral_3"
@@ -374,10 +392,17 @@
               >
                 <span class="skeleton skeleton-text"></span>
               </button>
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_anual_3"
+                data-target="modal"
+              >
+                <span class="skeleton skeleton-text"></span>
+              </button>
             </div>
             <footer class="card__footer"></footer>
           </div>
-          <div class="card full-width">
+          <div class="card full-width animate-appear">
             <h4 class="card__title">PLAN VIP 1 A 1</h4>
             <div class="card__value">
               <h2 class="card__info">¿Estás cansado/a de no tener resultados?</h2>
@@ -449,16 +474,23 @@
               <p class="card__info">
                 <span class="material-icons">done_all</span>RESULTADOS GARANTIZADOS
               </p>
-              <button
+              <!-- <button
                 class="precio btn_home btn_open_modal"
                 id="precio_mensual_vip"
+                data-target="modal"
+              >
+                <span class="skeleton skeleton-text"></span>
+              </button> -->
+              <button
+                class="precio btn_home btn_open_modal"
+                id="precio_trimestral_vip"
                 data-target="modal"
               >
                 <span class="skeleton skeleton-text"></span>
               </button>
               <button
                 class="precio btn_home btn_open_modal"
-                id="precio_trimestral_vip"
+                id="precio_anual_vip"
                 data-target="modal"
               >
                 <span class="skeleton skeleton-text"></span>
@@ -528,8 +560,8 @@
       </section>
       <!-- VIDEOLLAMADA -->
       <section class="container" id="videollamada">
-        <h2 class="section__title">VIDEOLLAMADA GRATIS</h2>
-        <div class="videollamada_info">
+        <h2 class="section__title animate-appear">VIDEOLLAMADA GRATIS</h2>
+        <div class="videollamada_info animate-appear">
           <p><span class="material-symbols-outlined">exercise</span> Consulta gratuita</p>
           <p class="videollamada_subtitle">
             Comienza tu transformación física con una videollamada
@@ -556,14 +588,14 @@
             <span>PROGRAMA TU VIDEOLLAMADA GRATIS</span>
           </a>
         </div>
-        <div class="videollamada_image_container">
+        <div class="videollamada_image_container animate-appear">
           <img src="./assets/videollamada.webp" class="videollamada_img" alt="" />
         </div>
       </section>
       <!-- PASOS -->
       <section class="container" id="pasos">
-        <h2 class="section__title">Pasos a seguir para obtener tu plan</h2>
-        <div class="card__container">
+        <h2 class="section__title animate-appear">Pasos a seguir para obtener tu plan</h2>
+        <div class="card__container animate-appear">
           <div class="card">
             <h4 class="card__title">
               1 - Elige el plan. <span class="material-icons">category</span>
@@ -600,8 +632,8 @@
       </section>
       <!-- RESULTADOS -->
       <section class="container" id="Resultados">
-        <h2 class="section__title">Resultados</h2>
-        <div class="gallery">
+        <h2 class="section__title animate-appear">Resultados</h2>
+        <div class="gallery animate-appear">
           <img src="./assets/foto_1.jpeg" alt="foto de una persona mostrando su cambio fisico" />
           <img src="./assets/foto_2.jpeg" alt="foto de una persona mostrando su cambio fisico" />
           <img src="./assets/foto_3.jpeg" alt="foto de una persona mostrando su cambio fisico" />
@@ -609,8 +641,8 @@
       </section>
       <!-- FOOTER/CONTACTO -->
       <footer class="container footer" id="contacto">
-        <h2 class="section__title">Contacto</h2>
-        <div class="social__media">
+        <h2 class="section__title animate-appear">Contacto</h2>
+        <div class="social__media animate-appear">
           <a target="_blank" href="https://www.instagram.com/nikkerok/">
             <img class="social__media__logo" src="./assets/instagram.svg" alt="instagram icon" />
           </a>
